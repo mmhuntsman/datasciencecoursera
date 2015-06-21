@@ -30,9 +30,9 @@ The source dataset was transformed in the following ways:
 Dataset Attributes
 ------------------
 The following two attributes are categorical and were used to group the source dataset in the transformation steps above.
-"SubjectID" - Identifies a single participant
+"SubjectID" (int)- Identifies a single participant
 
-"ActivityName" - The descriptive name of the Activity in which the participant was engaged. The list of possible values are 
+"ActivityName" (string)- The descriptive name of the Activity in which the participant was engaged. The list of possible values are 
 * WALKING
 * WALKING_UPSTAIRS
 * WALKING_DOWNSTAIRS
@@ -40,7 +40,7 @@ The following two attributes are categorical and were used to group the source d
 * STANDING
 * LAYING
 
-The remaining variables come from the source dataset and have had the "mean" aggregate function applied at the SubjectID - ActivityName level. 
+The remaining variables come from the source dataset and have had the "mean" aggregate function applied at the SubjectID - ActivityName level. The data source variables are all normalized and bounded within [-1,1]. As such, the mean value calculated here represents the mean of the normalized values. All variables are of the type Number.
 
 "tBodyAcc-mean()-X"
 
